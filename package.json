@@ -1,19 +1,19 @@
 {
   "name": "@tscircuit/simple-3d-svg",
   "main": "./dist/index.js",
-  "version": "0.0.40",
+  "version": "0.0.41",
   "type": "module",
   "description": "An extremely simple 3D SVG renderer",
   "files": [
     "dist"
   ],
   "scripts": {
-    "start": "cosmos",
-    "build": "tsup-node --dts --sourcemap inline --format esm ./lib/index.ts",
+    "start": "node init && cosmos",
+    "build": "node init && tsup-node --dts --sourcemap inline --format esm ./lib/index.ts",
     "format": "biome format --write .",
     "format:check": "biome format .",
     "vercel-build": "bun run build:site",
-    "build:site": "cosmos-export",
+    "build:site": "node init && cosmos-export",
     "example": "bun examples/animatedsubdivision.html"
   },
   "devDependencies": {
